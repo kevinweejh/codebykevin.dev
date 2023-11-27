@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Where Web Dev Meets Biz Dev",
   generator: 'Next.js',
   keywords: ['Next.js', 'React', 'TypeScript', 'JavaScript'],
-  authors: [{ name: 'Kevin', url: 'https://github.com/kevinweejh' }]
+  authors: [{ name: 'Kevin', url: 'https://github.com/kevinweejh' }],
   creator: 'Kevin Wee',
   openGraph: {
     title: "codebykevin.dev",
