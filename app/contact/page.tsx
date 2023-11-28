@@ -1,6 +1,5 @@
 "use client";
 import { Github, Mail, Linkedin } from "lucide-react";
-import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
@@ -33,9 +32,10 @@ export default function Example() {
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s) => (
 						<Card>
-							<Link
+							<a
 								href={s.href}
 								target="_blank"
+								rel="noopener noreferrer"
 								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 							>
 								<span
@@ -53,7 +53,7 @@ export default function Example() {
 										{s.label}
 									</span>
 								</div>
-							</Link>
+							</a>
 						</Card>
 					))}
 				</div>

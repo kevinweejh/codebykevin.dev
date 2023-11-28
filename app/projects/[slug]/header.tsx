@@ -68,7 +68,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 							)}
 						</span>
 						
-						<Link target="_blank" href="https://github.com/kevinweejh">
+						<a target="_blank" rel="noopener noreferrer" href="https://github.com/kevinweejh">
 							<Github
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -76,8 +76,8 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 										: "text-zinc-600 hover:text-zinc-900"
 								} `}
 							/>
-						</Link>
-						<Link target="_blank" href="https://www.linkedin.com/in/kevinweejh/">
+						</a>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/kevinweejh/">
 							<Linkedin
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -85,7 +85,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 										: "text-zinc-600 hover:text-zinc-900"
 								} `}
 							/>
-						</Link>
+						</a>
 					</div>
 
 					<Link
@@ -114,9 +114,9 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 					<div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
 						<div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
 							{links.map((link) => (
-								<Link target="_blank" key={link.label} href={link.href}>
+								<a target="_blank" rel="noopener noreferrer" key={link.label} href={link.href}>
 									{link.label} <span aria-hidden="true">&rarr;</span>
-								</Link>
+								</a>
 							))}
 						</div>
 					</div>
