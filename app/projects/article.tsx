@@ -1,6 +1,6 @@
 import type { Project } from "@/.contentlayer/generated";
-import Link from "next/link";
-import { Eye, View } from "lucide-react";
+import { Eye } from "lucide-react";
+import { ProjectLink } from "./project-link";
 
 type Props = {
 	project: Project;
@@ -11,11 +11,10 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 	const href = project.cardUrl ?? `/projects/${project.slug}`;
 
 	return (
-		<Link
+		<ProjectLink
 			href={href}
-			{...(project.cardUrl
-				? { target: "_blank", rel: "noopener noreferrer" }
-				: {})}
+			slug={project.slug}
+			external={Boolean(project.cardUrl)}
 		>
 			<article className="p-4 md:p-8">
 				<div className="flex justify-between gap-2 items-center">
@@ -42,6 +41,6 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 					{project.description}
 				</p>
 			</article>
-		</Link>
+		</ProjectLink>
 	);
 };

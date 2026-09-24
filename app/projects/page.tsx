@@ -1,9 +1,9 @@
-import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
+import { ProjectLink } from "./project-link";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 
@@ -54,11 +54,10 @@ export default async function ProjectsPage() {
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
-            <Link
+            <ProjectLink
               href={featured.cardUrl ?? `/projects/${featured.slug}`}
-              {...(featured.cardUrl
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
+              slug={featured.slug}
+              external={Boolean(featured.cardUrl)}
             >
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
@@ -96,7 +95,7 @@ export default async function ProjectsPage() {
                   </p>
                 </div>
               </article>
-            </Link>
+            </ProjectLink>
           </Card>
           
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
