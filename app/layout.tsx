@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: "codebykevin.dev",
     template: "%s | codebykevin.dev",
   },
-  description: "Where Web Dev Meets Biz Dev",
+  description: "Learning cybersecurity by teaching it.",
   generator: 'Next.js',
   keywords: ['Next.js', 'React', 'TypeScript', 'JavaScript'],
   authors: [{ name: 'Kevin', url: 'https://github.com/kevinweejh' }],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "codebykevin.dev",
     description:
-      "Where Web Dev Meets Biz Dev",
+      "Learning cybersecurity by teaching it.",
     url: "https://codebykevin.dev",
     siteName: "codebykevin.dev",
     images: [
